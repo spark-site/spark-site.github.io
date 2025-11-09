@@ -12,6 +12,7 @@ body {
   background-color: #1a2835;
   color: white;
 }
+
 .topbar {
   display: flex;
   align-items: center;
@@ -20,10 +21,12 @@ body {
   padding: 10px 20px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
+
 .topbar img {
   height: 40px;
   cursor: pointer;
 }
+
 .topbar nav a {
   color: white;
   text-decoration: none;
@@ -31,14 +34,39 @@ body {
   font-weight: bold;
   transition: 0.2s;
 }
+
 .topbar nav a:hover {
   color: #00bcd4;
 }
-h1 {
-  text-align: center;
-  margin-top: 150px;
-  font-size: 3em;
+
+.banner-container {
+  position: relative;
+  width: 100%;
 }
+
+.banner-container img {
+  width: 100%;
+  filter: brightness(50%);
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.banner-text h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+.banner-text p {
+  font-size: 1.5em;
+  margin: 10px 0 0 0;
+}
+
 button {
   display: block;
   margin: 40px auto;
@@ -51,9 +79,11 @@ button {
   cursor: pointer;
   transition: 0.3s;
 }
+
 button:hover {
   background: #0097a7;
 }
+
 </style>
 </head>
 <body>
@@ -65,7 +95,14 @@ button:hover {
   </nav>
 </div>
 
-<h1>Download</h1>
+<div class="banner-container">
+  <img src="https://uploads.onecompiler.io/436y42uk8/4445ckbuk/officialsparksitebanner.png" alt="Banner">
+  <div class="banner-text">
+    <h1>Download</h1>
+    <p>This is only a Demo of Spark. WIP and a lot of bugs.</p>
+  </div>
+</div>
+
 <button onclick="window.location.href='Spark.zip'">Download Spark</button>
 
 </body>
